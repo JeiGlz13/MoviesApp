@@ -1,0 +1,720 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <DashboardRoutes/> Debe mostrarse correctamente 1`] = `
+Array [
+  <nav
+    className="navbar navbar-expand-sm navbar-dark bg-dark"
+  >
+    <a
+      className="navbar-brand"
+      href="/"
+      onClick={[Function]}
+    >
+      Genero
+    </a>
+    <div
+      className="navbar-collapse"
+    >
+      <div
+        className="navbar-nav"
+      >
+        <a
+          aria-current="page"
+          className="nav-item nav-link active"
+          href="/gangsters"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          Gangsters
+        </a>
+        <a
+          aria-current={null}
+          className="nav-item nav-link"
+          href="/war"
+          onClick={[Function]}
+        >
+          War
+        </a>
+        <a
+          aria-current={null}
+          className="nav-item nav-link"
+          href="/search"
+          onClick={[Function]}
+        >
+          Search
+        </a>
+      </div>
+    </div>
+    <div
+      className="navbar-collapse collapse w-100 order-3 dual-collapse2"
+    >
+      <ul
+        className="navbar-nav ml-auto"
+      >
+        <span
+          className="nav-item nav-link text-info"
+        >
+          Jeisson
+        </span>
+        <button
+          className="nav-item nav-link btn"
+          onClick={[Function]}
+        >
+          Logout
+        </button>
+      </ul>
+    </div>
+  </nav>,
+  <div
+    className="container mt-2"
+  >
+    <div>
+      <h1>
+        Gangsters Screen
+      </h1>
+      <hr />
+      <div
+        className="card animate__animated animate__fadeIn"
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <div
+          className="card ms-3"
+          style={
+            Object {
+              "maxWidth": 540,
+            }
+          }
+        >
+          <div
+            className="row no-gutters"
+          >
+            <div
+              className="col-md-4"
+            >
+              <img
+                alt="A Bronx Tale"
+                className="card-img"
+                src="./assets/movies/gang-ABronxTale.jpg"
+              />
+            </div>
+            <div
+              className="col-md-8"
+            >
+              <div
+                className="card-body"
+              >
+                <h5
+                  className="card-title"
+                >
+                  A Bronx Tale
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Director: 
+                  Robert De Niro
+                </p>
+                <p
+                  className="card-text"
+                >
+                   Cast:  
+                  Roberto De Niro, Chazz Palminteri, Lillo Brancato
+                </p>
+                <p
+                  className="card-text"
+                >
+                  <small
+                    className="text-muted"
+                  >
+                    Release: 
+                    1993
+                  </small>
+                </p>
+                <a
+                  href="/movie/gang-ABronxTale"
+                  onClick={[Function]}
+                >
+                  Mas...
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card ms-3"
+          style={
+            Object {
+              "maxWidth": 540,
+            }
+          }
+        >
+          <div
+            className="row no-gutters"
+          >
+            <div
+              className="col-md-4"
+            >
+              <img
+                alt="Casino"
+                className="card-img"
+                src="./assets/movies/gang-Casino.jpg"
+              />
+            </div>
+            <div
+              className="col-md-8"
+            >
+              <div
+                className="card-body"
+              >
+                <h5
+                  className="card-title"
+                >
+                  Casino
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Director: 
+                  Martin Scorsese
+                </p>
+                <p
+                  className="card-text"
+                >
+                   Cast:  
+                  Robert De Niro, Joe Pesci, Sharon Stone
+                </p>
+                <p
+                  className="card-text"
+                >
+                  <small
+                    className="text-muted"
+                  >
+                    Release: 
+                    1995
+                  </small>
+                </p>
+                <a
+                  href="/movie/gang-Casino"
+                  onClick={[Function]}
+                >
+                  Mas...
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card ms-3"
+          style={
+            Object {
+              "maxWidth": 540,
+            }
+          }
+        >
+          <div
+            className="row no-gutters"
+          >
+            <div
+              className="col-md-4"
+            >
+              <img
+                alt="GoodFellas"
+                className="card-img"
+                src="./assets/movies/gang-Goodfellas.jpg"
+              />
+            </div>
+            <div
+              className="col-md-8"
+            >
+              <div
+                className="card-body"
+              >
+                <h5
+                  className="card-title"
+                >
+                  GoodFellas
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Director: 
+                  Martin Scorsese
+                </p>
+                <p
+                  className="card-text"
+                >
+                   Cast:  
+                  Robert De Niro, Joe Pesci, Ray Liotta
+                </p>
+                <p
+                  className="card-text"
+                >
+                  <small
+                    className="text-muted"
+                  >
+                    Release: 
+                    1990
+                  </small>
+                </p>
+                <a
+                  href="/movie/gang-Goodfellas"
+                  onClick={[Function]}
+                >
+                  Mas...
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card ms-3"
+          style={
+            Object {
+              "maxWidth": 540,
+            }
+          }
+        >
+          <div
+            className="row no-gutters"
+          >
+            <div
+              className="col-md-4"
+            >
+              <img
+                alt="Once Upon A Time In Amercica"
+                className="card-img"
+                src="./assets/movies/gang-OnceUponATimeInAmerica.jpg"
+              />
+            </div>
+            <div
+              className="col-md-8"
+            >
+              <div
+                className="card-body"
+              >
+                <h5
+                  className="card-title"
+                >
+                  Once Upon A Time In Amercica
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Director: 
+                  Sergio Leone
+                </p>
+                <p
+                  className="card-text"
+                >
+                   Cast:  
+                  Robert De Niro, James Woods, Elizabeth McGovern
+                </p>
+                <p
+                  className="card-text"
+                >
+                  <small
+                    className="text-muted"
+                  >
+                    Release: 
+                    1984
+                  </small>
+                </p>
+                <a
+                  href="/movie/gang-OnceUponATimeInAmerica"
+                  onClick={[Function]}
+                >
+                  Mas...
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card ms-3"
+          style={
+            Object {
+              "maxWidth": 540,
+            }
+          }
+        >
+          <div
+            className="row no-gutters"
+          >
+            <div
+              className="col-md-4"
+            >
+              <img
+                alt="Scarface"
+                className="card-img"
+                src="./assets/movies/gang-Scarface.jpg"
+              />
+            </div>
+            <div
+              className="col-md-8"
+            >
+              <div
+                className="card-body"
+              >
+                <h5
+                  className="card-title"
+                >
+                  Scarface
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Director: 
+                  Brian De Palma
+                </p>
+                <p
+                  className="card-text"
+                >
+                   Cast:  
+                  Al Pacino, Michelle Pfeiffer, Steven Bauer
+                </p>
+                <p
+                  className="card-text"
+                >
+                  <small
+                    className="text-muted"
+                  >
+                    Release: 
+                    1983
+                  </small>
+                </p>
+                <a
+                  href="/movie/gang-Scarface"
+                  onClick={[Function]}
+                >
+                  Mas...
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card ms-3"
+          style={
+            Object {
+              "maxWidth": 540,
+            }
+          }
+        >
+          <div
+            className="row no-gutters"
+          >
+            <div
+              className="col-md-4"
+            >
+              <img
+                alt="The Godfather: Part I"
+                className="card-img"
+                src="./assets/movies/gang-TheGodfather.jpg"
+              />
+            </div>
+            <div
+              className="col-md-8"
+            >
+              <div
+                className="card-body"
+              >
+                <h5
+                  className="card-title"
+                >
+                  The Godfather: Part I
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Director: 
+                  Francis Ford Coppola
+                </p>
+                <p
+                  className="card-text"
+                >
+                   Cast:  
+                  Marlon Brando, Al Pacino, James Caan
+                </p>
+                <p
+                  className="card-text"
+                >
+                  <small
+                    className="text-muted"
+                  >
+                    Release: 
+                    1972
+                  </small>
+                </p>
+                <a
+                  href="/movie/gang-TheGodfather"
+                  onClick={[Function]}
+                >
+                  Mas...
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card ms-3"
+          style={
+            Object {
+              "maxWidth": 540,
+            }
+          }
+        >
+          <div
+            className="row no-gutters"
+          >
+            <div
+              className="col-md-4"
+            >
+              <img
+                alt="The Godfather: Part II"
+                className="card-img"
+                src="./assets/movies/gang-TheGodfatherPartII.jpg"
+              />
+            </div>
+            <div
+              className="col-md-8"
+            >
+              <div
+                className="card-body"
+              >
+                <h5
+                  className="card-title"
+                >
+                  The Godfather: Part II
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Director: 
+                  Francis Ford Coppola
+                </p>
+                <p
+                  className="card-text"
+                >
+                   Cast:  
+                  Al Pacino, Robert De Niro, Robert Duvall
+                </p>
+                <p
+                  className="card-text"
+                >
+                  <small
+                    className="text-muted"
+                  >
+                    Release: 
+                    1974
+                  </small>
+                </p>
+                <a
+                  href="/movie/gang-TheGodfatherPartII"
+                  onClick={[Function]}
+                >
+                  Mas...
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card ms-3"
+          style={
+            Object {
+              "maxWidth": 540,
+            }
+          }
+        >
+          <div
+            className="row no-gutters"
+          >
+            <div
+              className="col-md-4"
+            >
+              <img
+                alt="The Godfather: Part III"
+                className="card-img"
+                src="./assets/movies/gang-TheGodfatherPartIII.jpg"
+              />
+            </div>
+            <div
+              className="col-md-8"
+            >
+              <div
+                className="card-body"
+              >
+                <h5
+                  className="card-title"
+                >
+                  The Godfather: Part III
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Director: 
+                  Francis Ford Coppola
+                </p>
+                <p
+                  className="card-text"
+                >
+                   Cast:  
+                  Al Pacino, Andy Garcia, Diane Keaton
+                </p>
+                <p
+                  className="card-text"
+                >
+                  <small
+                    className="text-muted"
+                  >
+                    Release: 
+                    1990
+                  </small>
+                </p>
+                <a
+                  href="/movie/gang-TheGodfatherPartIII"
+                  onClick={[Function]}
+                >
+                  Mas...
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card ms-3"
+          style={
+            Object {
+              "maxWidth": 540,
+            }
+          }
+        >
+          <div
+            className="row no-gutters"
+          >
+            <div
+              className="col-md-4"
+            >
+              <img
+                alt="The Irishman"
+                className="card-img"
+                src="./assets/movies/gang-TheIrishman.jpg"
+              />
+            </div>
+            <div
+              className="col-md-8"
+            >
+              <div
+                className="card-body"
+              >
+                <h5
+                  className="card-title"
+                >
+                  The Irishman
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Director: 
+                  Martin Scorsese
+                </p>
+                <p
+                  className="card-text"
+                >
+                   Cast:  
+                  Robert De Niro, Al Pacino, Joe Pesci
+                </p>
+                <p
+                  className="card-text"
+                >
+                  <small
+                    className="text-muted"
+                  >
+                    Release: 
+                    2019
+                  </small>
+                </p>
+                <a
+                  href="/movie/gang-TheIrishman"
+                  onClick={[Function]}
+                >
+                  Mas...
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card ms-3"
+          style={
+            Object {
+              "maxWidth": 540,
+            }
+          }
+        >
+          <div
+            className="row no-gutters"
+          >
+            <div
+              className="col-md-4"
+            >
+              <img
+                alt="The Untouchables"
+                className="card-img"
+                src="./assets/movies/gang-TheUntouchables.jpg"
+              />
+            </div>
+            <div
+              className="col-md-8"
+            >
+              <div
+                className="card-body"
+              >
+                <h5
+                  className="card-title"
+                >
+                  The Untouchables
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Director: 
+                  Brian De Palma
+                </p>
+                <p
+                  className="card-text"
+                >
+                   Cast:  
+                  Kevin Costner, Sean Connery, Robert De Niro
+                </p>
+                <p
+                  className="card-text"
+                >
+                  <small
+                    className="text-muted"
+                  >
+                    Release: 
+                    1987
+                  </small>
+                </p>
+                <a
+                  href="/movie/gang-TheUntouchables"
+                  onClick={[Function]}
+                >
+                  Mas...
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
