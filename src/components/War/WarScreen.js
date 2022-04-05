@@ -1,14 +1,13 @@
 import React from 'react';
 import {MoviesList} from '../movies/MoviesList'
+import { Titles } from '../UI/Titles';
 
 export const WarScreen = () => {
     const genreWar = 'War';
 
     return (
         <div>
-            <h1>War Screen</h1>
-            <hr/>
-
+            <Titles subtitle="War" />
             <MoviesList genre = {genreWar}/>
         </div>
     )

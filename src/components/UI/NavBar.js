@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import { Link, NavLink, useHistory } from 'react-router-dom';
+import { navigationLinks } from '../../data/navigationLinks';
 import { AuthContext } from '../auth/AuthContext';
-import { authReducer } from '../auth/authReducer';
 import { types } from '../types/types';
+import logoMovie from '../../assets/RedCarpetMovie.png';
 
 export const NavBar = () => {
 
@@ -15,56 +16,41 @@ export const NavBar = () => {
             type: types.logout
         });
     }
+    
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
-            
-            <Link 
-                className="navbar-brand" 
-                to="/"
-            >
-                Genero
-            </Link>
-
-            <div className="navbar-collapse">
-                <div className="navbar-nav">
-
-                    <NavLink 
-                        activeClassName="active"
-                        className="nav-item nav-link" 
-                        exact
-                        to="/gangsters"
-                    >
-                        Gangsters
-                    </NavLink>
-
-                    <NavLink 
-                        activeClassName="active"
-                        className="nav-item nav-link" 
-                        exact
-                        to="/war"
-                    >
-                        War
-                    </NavLink>
-
-                    <NavLink activeClassName = "active"
-                    className = "nav-item nav-link"
-                    exact to = "/search" >
-                        Search
-                    </NavLink>
+        <nav className="bg-neutral-800 shadow shadow-gray-300 w-full py-1 fixed top-0 z-50">
+            <div className="mx-2 md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
+                <div className="text-indigo-500 order-1">
+                    <Link 
+                    to="/">
+                        <img src= {logoMovie} alt='movies'
+                            className='ml-2 w-20 ' />
+                    </Link>
                 </div>
-            </div>
 
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
-                <ul className="navbar-nav ml-auto">
-                    <span className = "nav-item nav-link text-info" >{name}</span>
-                    
-                    <button 
-                        className="nav-item nav-link btn"
-                        onClick ={handleLogout} 
-                    >
-                        Logout
+                <div className="text-gray-200 w-full md:w-auto order-2">
+                    <ul className="flex font-semibold justify-between">
+                        {
+                            navigationLinks.map(({to, label, id}) => (
+                                <li key={id} className='mx-8  transition-all duration-150 hover:scale-110 ' >
+                                    <NavLink activeClassName = "text-indigo-400"
+                                    className="hover:text-indigo-300   "
+                                    exact to = {to} >
+                                        {label}
+                                    </NavLink>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+
+                <div className="order-3">
+                    <button onClick ={handleLogout} 
+                        className="transition-all duration-200 px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2">
+                        <i className="fa-solid fa-arrow-right-from-bracket text-lg"></i>
+                        <span>Exit</span>
                     </button>
-                </ul>
+                </div>
             </div>
         </nav>
     )

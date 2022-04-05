@@ -8,9 +8,7 @@ export const MoviesList = ({genre}) => {
     
 
     return (
-        <div className = "card animate__animated animate__fadeIn" style = {{display: "flex",
-         flexDirection: "row",
-         flexWrap: "wrap"}}>
+        <div className = "animate__animated animate__fadeIn w-full flex flex-row flex-wrap justify-around mb-16" >
             {
                 movies.map(movie =>(
                     <MovieCard key = {movie.id}

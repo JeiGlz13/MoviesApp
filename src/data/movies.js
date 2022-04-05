@@ -25,7 +25,7 @@ export const movies = [
     },
     {
         'id': 'gang-OnceUponATimeInAmerica',
-        'name':'Once Upon A Time In Amercica', 
+        'name':'Once Upon A Time In America', 
         'Genre':'Gangsters', 
         'Director':'Sergio Leone',
         'Year':'1984',

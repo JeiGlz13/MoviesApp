@@ -2,10 +2,10 @@ import React, { useMemo } from 'react';
 import queryString from 'query-string';
 
 import { useLocation } from 'react-router-dom';
-import { movies } from '../../data/movies';
 import { useForm } from '../hooks/useForm';
 import { MovieCard } from '../movies/MovieCard';
 import { getMoviesByName } from '../selectors/getMoviesByName';
+import { Titles } from '../UI/Titles';
 
 export const SearchScreen = ({history}) => {
     const location = useLocation();
@@ -15,7 +15,7 @@ export const SearchScreen = ({history}) => {
         //name del input
         searchText: q
     }
-    const [formValues, handleInputChange, reset] = useForm(initialForm);
+    const [formValues, handleInputChange] = useForm(initialForm);
     
     const {searchText} = formValues;
 
@@ -29,8 +29,7 @@ export const SearchScreen = ({history}) => {
 
     return (
         <div>
-            <h1>Search Screen</h1>
-            <hr/>
+            <Titles title='Buscar Pelicula' />
 
             <div className = "row" >
                 <div className = "col-5" >

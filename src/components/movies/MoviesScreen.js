@@ -23,14 +23,14 @@ export const MoviesScreen = ({history}) => {
   }
 
     return (
-        <div className ="row mt-5">
-            <div className = "col-4">
+        <div className ="">
+            <div className = "">
                 <img src={`../assets/movies/${movieId}.jpg`}
-                className = "img-thumbnail animate__animated animate__fadeIn"
+                className = " animate__animated animate__fadeIn"
                 alt = {name} />
             </div>
 
-            <div className = "col-8 animate__animated animate__fadeInUp">
+            <div className = " animate__animated animate__fadeInUp">
                 <h3>
                     {name}
                 </h3>
