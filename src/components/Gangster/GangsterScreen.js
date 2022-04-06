@@ -6,7 +6,7 @@ export const GangsterScreen = () => {
     const genreGangsters = 'Gangsters';
 
     return (
-        <div>
+        <div className='px-10'>
             <Titles subtitle="Gangsters" />
 
             <MoviesList genre = {genreGangsters}/>

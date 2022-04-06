@@ -5,7 +5,7 @@ import {
 
 export const MovieCard = ({id, name, Director, Year, Cast}) => {
     return (
-        <div className="p-0 mt-16 mx-5 items-center flex flex-wrap cardShadow rounded-3xl">
+        <div className="p-0 mt-4 mb-4 items-center flex flex-wrap cardShadow rounded-3xl">
             <div className=" ml-auto mr-4">
                 <img alt="..." className="rounded-lg shadow-lg h-80 " 
                     src = {`./assets/movies/${id}.jpg`}/>

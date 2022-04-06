@@ -7,7 +7,7 @@ import logoMovie from '../../assets/RedCarpetMovie.png';
 
 export const NavBar = () => {
 
-    const {user: {name}, dispatch} = useContext(AuthContext);
+    const {dispatch} = useContext(AuthContext);
     const history = useHistory();
 
     const handleLogout = ()=>{
@@ -24,7 +24,7 @@ export const NavBar = () => {
                     <Link 
                     to="/">
                         <img src= {logoMovie} alt='movies'
-                            className='ml-2 w-20 ' />
+                            className='ml-2 w-[4.25rem] ' />
                     </Link>
                 </div>
 
@@ -47,7 +47,7 @@ export const NavBar = () => {
                 <div className="order-3">
                     <button onClick ={handleLogout} 
                         className="transition-all duration-200 px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2">
-                        <i className="fa-solid fa-arrow-right-from-bracket text-lg"></i>
+                        <i className="fa-solid fa-arrow-right-from-bracket text-md"></i>
                         <span>Exit</span>
                     </button>
                 </div>

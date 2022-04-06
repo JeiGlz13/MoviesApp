@@ -7,6 +7,9 @@ import { MovieCard } from '../movies/MovieCard';
 import { getMoviesByName } from '../selectors/getMoviesByName';
 import { Titles } from '../UI/Titles';
 
+import searchMovieIcon from '../../assets/SearchMovie.webp';
+import notFound from '../../assets/NotFound.png';
+
 export const SearchScreen = ({history}) => {
     const location = useLocation();
     
@@ -28,52 +31,57 @@ export const SearchScreen = ({history}) => {
     }
 
     return (
-        <div>
+        <div className='px-10'>
             <Titles title='Buscar Pelicula' />
 
-            <div className = "row" >
+            <div className = "flex flex-row mt-3" >
                 <div className = "col-5" >
-                    <h4>Search Form</h4>
+                    <h4 className='text-sky-600 text-3xl font-extrabold mb-4' >Search Form</h4>
 
-                    <hr/>
-                    <form onSubmit = {handleSearch} >
-                        <input type = "text"
-                        placeholder = "Buscar pelicula"
-                        className = "form-control"
-                        name = "searchText"
-                        value = {searchText}
-                        onChange = {handleInputChange}
-                        autoComplete = "off" />
-                    </form>
-
-                    <button type = "submit"
-                    className = "btn m-1 btn-block btn-outline-primary"
-                     >
-                        Buscar...
-                    </button>
+                    <div className='flex flex-row justify-center items-center mt-6' >
+                        <form onSubmit = {handleSearch}
+                         className="relative text-gray-700 w-80 ">
+                            <input type="search"
+                            name = "searchText"
+                            value = {searchText}
+                            onChange = {handleInputChange}
+                            autoComplete = "off"
+                            placeholder="Search"
+                            className="bg-gray-100 w-full h-12 px-5 pr-10 rounded-full 
+                            text-lg focus:outline-none cardShadow"/>
+                        
+                            <button type="submit" className="absolute right-0 top-0 mt-[0.65rem] mr-5">
+                                <i className="fa-solid fa-magnifying-glass text-lg"></i>
+                            </button>
+                        </form>
+                    </div>
                     
                 </div>
 
-                <div className = "col-7" >
-                    <h4>Resultados</h4>
+                <div className = "w-full justify-center flex flex-col ml-14" >
+                    <h4 className='text-sky-600 text-3xl font-extrabold mb-3' >Results</h4>
 
                     {   (q==='') 
-                        && <div className = "alert alert-info">
-                            Buscar pelicula
-                        </div>
+                        && <div className = "flex flex-col justify-center items-center">
+                                <img src={searchMovieIcon} alt='search ' className='w-72' />
+                                <h1 className='font-extrabold text-3xl' >Search a movie</h1>
+                            </div>
                     }
                     {   (q!=='' && moviesFiltered.length ===0) 
-                        && <div className = "alert alert-danger">
-                            No se encontro {q}
-                        </div>
+                        && <div className = "flex flex-col justify-center items-center">
+                                <img src={notFound} alt='search ' className='w-72' />
+                                <h1 className='font-extrabold text-3xl text-red-500' >Movie Not Found</h1>
+                            </div>
                     }
-                    {
-                        moviesFiltered.map(movie => (
-                            <MovieCard 
-                            key={movie.id} 
-                            {...movie} />
-                        ))
-                    }
+                    <div className='flex flex-wrap' >
+                        {
+                            moviesFiltered.map(movie => (
+                                <MovieCard
+                                key={movie.id}
+                                {...movie} />
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         </div>

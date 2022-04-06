@@ -6,7 +6,7 @@ export const WarScreen = () => {
     const genreWar = 'War';
 
     return (
-        <div>
+        <div className='px-10' >
             <Titles subtitle="War" />
             <MoviesList genre = {genreWar}/>
         </div>
