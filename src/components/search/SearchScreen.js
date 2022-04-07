@@ -31,23 +31,23 @@ export const SearchScreen = ({history}) => {
     }
 
     return (
-        <div className='px-10'>
+        <div className='w-full px-10'>
             <Titles title='Buscar Pelicula' />
 
             <div className = "flex flex-row mt-3" >
-                <div className = "col-5" >
+                <div className = "w-full" >
                     <h4 className='text-sky-600 text-3xl font-extrabold mb-4' >Search Form</h4>
 
                     <div className='flex flex-row justify-center items-center mt-6' >
                         <form onSubmit = {handleSearch}
-                         className="relative text-gray-700 w-80 ">
+                         className="relative text-gray-700 w-96 ">
                             <input type="search"
                             name = "searchText"
                             value = {searchText}
                             onChange = {handleInputChange}
                             autoComplete = "off"
                             placeholder="Search"
-                            className="bg-gray-100 w-full h-12 px-5 pr-10 rounded-full 
+                            className="bg-gray-100 w-full h-12 px-7 pr-12 rounded-full 
                             text-lg focus:outline-none cardShadow"/>
                         
                             <button type="submit" className="absolute right-0 top-0 mt-[0.65rem] mr-5">

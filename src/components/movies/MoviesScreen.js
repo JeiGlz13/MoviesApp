@@ -23,38 +23,6 @@ export const MoviesScreen = ({history}) => {
   }
 
     return (
-        // <div className ="">
-        //     <div className = "">
-        //         <img src={`../assets/movies/${movieId}.jpg`}
-        //         className = " animate__animated animate__fadeIn"
-        //         alt = {name} />
-        //     </div>
-
-        //     <div className = " animate__animated animate__fadeInUp">
-        //         <h3>
-        //             {name}
-        //         </h3>
-        //         <ul className = "list-group list-group-flush">
-        //             <li className = "list-group-item">
-        //                 <b>Director: {Director}</b>
-        //             </li>
-        //             <li className = "list-group-item">
-        //                 <b>Genre: {Genre}</b>
-        //             </li>
-        //             <li className = "list-group-item">
-        //                 <b>Release: {Year}</b>
-        //             </li>
-        //         </ul>
-
-        //         <h5>Cast</h5>
-        //         <p>{Cast}</p>
-
-        //         <button className = "btn btn-outline-info"
-        //         onClick = {handleReturn}>
-        //             Return
-        //         </button>
-        //     </div>
-        // </div>
         <div>
             <div className="w-full min-h-screen bg-blue-100 -mt-14 flex items-center  lg:p-20 overflow-hidden relative">
                 <div className="flex-1 min-h-full min-w-full rounded-3xl bg-white shadow-xl p-10 lg:p-20 text-gray-800 relative md:flex items-center text-center md:text-left">
