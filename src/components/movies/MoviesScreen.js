@@ -24,7 +24,7 @@ export const MoviesScreen = ({history}) => {
 
     return (
         <div>
-            <div className="w-full min-h-screen bg-blue-100 -mt-14 flex items-center  lg:p-20 overflow-hidden relative">
+            <div className="w-full min-h-screen bg-blue-100 -mt-16 md:-mt-14 flex items-center p-4 sm:p-6 md:p-10 lg:p-20 overflow-hidden relative">
                 <div className="flex-1 min-h-full min-w-full rounded-3xl bg-white shadow-xl p-10 lg:p-20 text-gray-800 relative md:flex items-center text-center md:text-left">
                     <div className="w-full md:w-1/2">
                         <div className="mb-10 lg:mb-15">
@@ -40,7 +40,7 @@ export const MoviesScreen = ({history}) => {
                                 Release {Year}
                             </h2>
 
-                            <p className='text-gray-800 text-lg mt-2 font-medium animate__animated animate__fadeIn'>
+                            <p className='text-gray-800 text-base sm:text-lg mt-2 font-medium animate__animated animate__fadeIn'>
                                 {Summary}
                             </p>
 
@@ -52,7 +52,7 @@ export const MoviesScreen = ({history}) => {
                             </p>
                         </div>
 
-                        <div className="mb-20 md:mb-0 animate__animated animate__fadeIn">
+                        <div className="mb-10 md:mb-0 animate__animated animate__fadeIn">
                             <button onClick = {handleReturn}
                              className="text-lg outline-none focus:outline-none transform transition-all hover:scale-110
                              font-bold text-yellow-500 hover:text-yellow-600">

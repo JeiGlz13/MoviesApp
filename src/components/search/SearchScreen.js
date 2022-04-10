@@ -31,14 +31,14 @@ export const SearchScreen = ({history}) => {
     }
 
     return (
-        <div className='w-full px-10'>
+        <div className='w-full px-0 sm:px-4 lg:px-6'>
             <Titles title='Buscar Pelicula' />
 
-            <div className = "flex flex-row mt-3" >
-                <div className = "w-full" >
-                    <h4 className='text-sky-600 text-3xl font-extrabold mb-4' >Search Form</h4>
+            <div className = "flex flex-row flex-wrap mt-3" >
+                <div className = "w-full md:w-5/12" >
+                    <h4 className='text-sky-600 text-2xl md:text-3xl font-extrabold mb-4 ml-2' >Search Form</h4>
 
-                    <div className='flex flex-row justify-center items-center mt-6' >
+                    <div className='flex flex-row justify-center md:justify-start items-center mt-6' >
                         <form onSubmit = {handleSearch}
                          className="relative text-gray-700 w-96 ">
                             <input type="search"
@@ -58,22 +58,22 @@ export const SearchScreen = ({history}) => {
                     
                 </div>
 
-                <div className = "w-full justify-center flex flex-col ml-14" >
-                    <h4 className='text-sky-600 text-3xl font-extrabold mb-3' >Results</h4>
+                <div className = "w-full md:w-7/12 justify-center flex flex-col mt-6 md:mt-0 " >
+                    <h4 className='text-sky-600 text-2xl md:text-3xl font-extrabold mb-1 md:mb-3 ml-3' >Results</h4>
 
                     {   (q==='') 
                         && <div className = "flex flex-col justify-center items-center">
-                                <img src={searchMovieIcon} alt='search ' className='w-72' />
-                                <h1 className='font-extrabold text-3xl' >Search a movie</h1>
+                                <img src={searchMovieIcon} alt='search ' className='w-60 sm:w-72' />
+                                <h1 className='font-extrabold text-2xl sm:text-3xl' >Search a movie</h1>
                             </div>
                     }
                     {   (q!=='' && moviesFiltered.length ===0) 
                         && <div className = "flex flex-col justify-center items-center">
-                                <img src={notFound} alt='search ' className='w-72' />
-                                <h1 className='font-extrabold text-3xl text-red-500' >Movie Not Found</h1>
+                                <img src={notFound} alt='search ' className='w-60 sm:w-72' />
+                                <h1 className='font-extrabold text-2xl md:text-3xl text-red-500' >Movie Not Found</h1>
                             </div>
                     }
-                    <div className='flex flex-wrap' >
+                    <div className='flex flex-wrap ml-4' >
                         {
                             moviesFiltered.map(movie => (
                                 <MovieCard

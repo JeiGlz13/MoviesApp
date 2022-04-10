@@ -28,19 +28,23 @@ export const LoginScreen = ({history}) => {
         //     </button>
         // </div>
 
-        <div className="bg-white font-montserrat">
+        <div className="bg-white font-montserrat min-h-screen flex items-center">
  
-            <div className="container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center mt-16">
-                <div className="sm:w-2/5 flex flex-col items-start mt-12 sm:mt-0">
-                    <h1 className="text-4xl lg:text-6xl leading-none mb-4"><strong className="font-black">Movies App</strong></h1>
-                    <p className="lg:text-xl mt-4 mb-4 sm:mb-12">Some of the best war and gangster movies of all times</p>
+            <div className="w-full mx-auto px-6 md:px-8 lg:px-12 flex flex-col-reverse md:flex-row items-center">
+                <div className="md:w-2/5 flex flex-col items-center md:items-start mt-12 md:mt-0 mb-8 md:mb-0">
+                    <h1 className="text-4xl sm:text-5xl md:text-4xl lg:text-6xl leading-none mb-4">
+                        <strong className="font-black">Movies App</strong>
+                    </h1>
+                    <p className="text-xl sm:text-2xl md:text-xl mt-4 mb-4 md:mb-12 text-center md:text-left">
+                        Some of the best war and gangster movies of all times
+                    </p>
                     <button onClick={handleLogin} 
                     type='button' 
-                    className="font-semibold text-lg bg-indigo-500 hover:bg-indigo-600 text-white py-3 px-10 rounded-full">
+                    className="font-semibold text-base sm:text-lg bg-indigo-500 hover:bg-indigo-600 text-white py-3 px-10 rounded-full">
                         Let's Start
                     </button>
                 </div>
-                <div className="sm:w-3/5">
+                <div className="w-11/12 sm:w-8/12 md:w-3/5">
                     <img src={movieVector} alt="movie" 
                     className="w-full" />
                 </div>
