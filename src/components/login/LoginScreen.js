@@ -3,9 +3,11 @@ import { AuthContext } from '../auth/AuthContext';
 import { types } from '../types/types';
 
 import movieVector from '../../assets/CinemaVector.jpg';
+import { useNavigate } from 'react-router-dom';
 
-export const LoginScreen = ({history}) => {
+export const LoginScreen = () => {
     const {dispatch} = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleLogin = ()=>{
         const lastPath = localStorage.getItem('lastPath') || '/';
@@ -15,8 +17,12 @@ export const LoginScreen = ({history}) => {
                 name: 'Jeisson'
             }
         });
-        history.replace(lastPath);
+        navigate(lastPath,{
+            replace: true
+        });
     }
+
+    console.log('Hola mundo')
 
     return (
         // <div className = "container mt-5">

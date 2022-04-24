@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import queryString from 'query-string';
 
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from '../hooks/useForm';
 import { MovieCard } from '../movies/MovieCard';
 import { getMoviesByName } from '../selectors/getMoviesByName';
@@ -10,8 +10,9 @@ import { Titles } from '../UI/Titles';
 import searchMovieIcon from '../../assets/SearchMovie.webp';
 import notFound from '../../assets/NotFound.png';
 
-export const SearchScreen = ({history}) => {
+export const SearchScreen = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     
     const {q = ''} = queryString.parse(location.search);
     const initialForm = {
@@ -27,7 +28,7 @@ export const SearchScreen = ({history}) => {
     
     const handleSearch = (e)=>{
         e.preventDefault();
-        history.push(`?q=${searchText}`);
+        navigate(`?q=${searchText}`);
     }
 
     return (

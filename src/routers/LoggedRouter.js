@@ -1,25 +1,24 @@
 import React from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import {  Navigate, Route, Routes } from 'react-router-dom';
 import { MoviesScreen } from '../components/movies/MoviesScreen';
 import {NavBar} from '../components/UI/NavBar';
 import { navigationLinks } from '../data/navigationLinks';
 
-export const DashboardRoutes = () => {
+export const LoggedRouter = () => {
     return (
         <>
           <NavBar />
 
           <div className = "mt-28">
-              <Switch>
-
+              <Routes>
                   {
                         navigationLinks.map(({to, Component, id}) => (
-                            <Route key={id} exact path = {to} component = {Component} />
+                            <Route key={id} path = {to} element = {<Component/>} />
                         ))
                   }
-                        <Route exact path = '/movie/:movieId' component = {MoviesScreen} />
-                  <Redirect to = {navigationLinks[0].to} />
-              </Switch>
+                  <Route path = 'movie/:movieId' element = {<MoviesScreen/>}  />
+                  <Route path = '/' element = {<Navigate to={navigationLinks[0].to} replace />} />
+              </Routes>
           </div>
         </>
     )

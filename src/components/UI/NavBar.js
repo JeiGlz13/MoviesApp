@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, NavLink, useHistory } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { navigationLinks } from '../../data/navigationLinks';
 import { AuthContext } from '../auth/AuthContext';
 import { types } from '../types/types';
@@ -8,13 +8,13 @@ import logoMovie from '../../assets/RedCarpetMovie.png';
 export const NavBar = () => {
 
     const {dispatch} = useContext(AuthContext);
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const handleLogout = ()=>{
-        history.replace('/login');
         dispatch({
             type: types.logout
         });
+        navigate('/login');
     }
     
     return (
@@ -33,9 +33,9 @@ export const NavBar = () => {
                         {
                             navigationLinks.map(({to, label, id}) => (
                                 <li key={id} className='mx-2 xs:mx-4 md:mx-8 text-sm xs:text-base transition-all duration-150 hover:scale-110 ' >
-                                    <NavLink activeClassName = "text-indigo-400"
-                                    className="hover:text-indigo-300   "
-                                    exact to = {to} >
+                                    <NavLink 
+                                    className={(isActive)=>isActive?"hover:text-indigo-300":"text-indigo-400"}
+                                    to = {to} >
                                         {label}
                                     </NavLink>
                                 </li>

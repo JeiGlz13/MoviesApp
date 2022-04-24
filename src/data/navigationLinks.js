@@ -5,19 +5,19 @@ import { WarScreen } from "../components/War/WarScreen";
 export const navigationLinks = [
     {
         id: 1,
-        to: '/gangsters',
+        to: 'gangsters',
         label: 'Gangster',
         Component: GangsterScreen
     },
     {
         id: 2,
-        to: '/war',
+        to: 'war',
         label: 'War',
         Component: WarScreen
     },
     {
         id: 3,
-        to: '/search',
+        to: 'search',
         label: 'Search',
         Component: SearchScreen
     },

@@ -1,24 +1,24 @@
 import React, { useMemo } from 'react'
-import { Redirect, useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { getMovieById } from '../selectors/getMovieById';
+import {moviesImages} from '../../helpers/moviesImages';
 
-export const MoviesScreen = ({history}) => {
+export const MoviesScreen = () => {
     const {movieId} = useParams();
+    const navigate = useNavigate();
 
     const movie = useMemo(() => getMovieById(movieId), [movieId]);
-     
+      
     if(!movie){
-        return <Redirect to="/"/>;
+        return <Navigate to="/"/>;
     }
+
+    console.log(movie)
 
     const {name, Genre, Director, Year, Cast, Summary} = movie;
 
   const handleReturn = ()=>{
-      if(history.length <=2){
-          history.push('/');
-      }else{
-        history.goBack();
-      }
+      navigate(-1);
        
   }
 
@@ -63,7 +63,9 @@ export const MoviesScreen = ({history}) => {
                     </div>
 
                     <div className="w-full md:w-1/2 text-center flex justify-center rounded-lg">
-                        <img src={`../assets/movies/${movieId}.jpg`}
+                        <img 
+                        src={moviesImages(`./${movieId}.jpg`).default}
+                        // src={`../assets/movies/${movieId}.jpg`}
                         className = 'w-72 rounded-lg animate__animated animate__fadeInRight' alt='Poster' />
                     </div>
                 </div>

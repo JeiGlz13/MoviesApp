@@ -18,7 +18,7 @@ export const movies = [
         'Cast':'Robert De Niro, Joe Pesci, Sharon Stone'
     },
     {
-        'id': 'gang-Goodfellas',
+        'id': 'gang-GoodFellas',
         'name':'GoodFellas', 
         'Genre':'Gangsters', 
         'Summary': 'The story of Irish-Italian American, Henry Hill, and how he lives day-to-day life as a member of the Mafia. Based on a true story,the plot revolves around Henry and his two friends',
